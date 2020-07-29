@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html practice</title>
+    <link rel="stylesheet" href="../css/html_practice.css">
+</head>
+<body>
+    <div class="navigation">
+    <ul>
+        <li><a href="#formats" alt="Formats">Formats</a></li>
+        <li><a href="#images" alt="Images">Images</a></li>
+        <li><a href="#link-quote" alt="Links and Quotes">Links and Quotes</a></li>
+        <li><a href="#table-list" alt="Tables and Lists">Tables and Lists</a></li>
+        <li><a href="#iframe" alt="iframe">iframe</a></li>
+        <li><a href="#responsive" alt="responsive">Responsive</a></li>
+        <li><a href="#computercode" alt="computer code">ComputerCode</a></li>
+    </ul>
+    </div>
+    <h1>Another Practice</h1>
+    <h2 id="formats" style="border:1px solid black">Various Formats </h2>
+    <p title="various formats">
+        <strong>strong</strong> <em>emphasized</em> <b>bold</b>
+        <i>italic</i> <u>underlined</u> <del>deleted</del>
+        <ins>inserted</ins> <mark>marked</mark> 
+        <small>small</small> <big>big</big> H<sub>2</sub>O 2<sup>3</sup> <br>
+    </p>
+
+    <h2 id="images">Images</h2>
+    <img src="../pictures/bruce copy.jpeg" usemap="#image-map">
+
+    <map name="image-map">
+    <area target="_blank" alt="green trees" title="tree" href="https://en.wikipedia.org/wiki/Tree" coords="2,38,8,27,9,18,17,14,20,6,30,4,33,14,40,33,49,45,58,47,62,58,71,63,76,58,77,73,81,84,87,73,90,63,97,69,105,81,104,93,108,102,119,111,128,115,134,121,146,120,169,122,186,122,204,124,236,128,257,134,278,140,284,148,284,155,287,168,284,179,286,188,300,194,327,207,343,219,339,229,287,221,267,229,237,230,201,228,174,225,143,219,124,224,102,204,84,205,58,210,52,220,58,234,42,247,31,255,14,259,0,253" shape="poly">
+    <area target="_blank" alt="blue sky" title="sky" href="https://en.wikipedia.org/wiki/Sky" coords="2,2,0,29,8,20,17,11,24,4,32,4,118,2,280,2,519,0,622,0,637,1,639,38,639,151,638,226,363,229,292,190,288,163,280,139,245,128,191,119,139,119" shape="poly">
+    <area target="_blank" alt="blue sea" title="sea" href="https://en.wikipedia.org/wiki/Sea" coords="367,228,426,227,476,225,538,228,584,228,618,228,637,226,636,297,637,335,636,422,482,425,338,372,305,353,271,342,242,324,278,312,303,308,311,317,325,327,349,334,371,332,389,332,371,323,361,320,356,310,370,310,382,306,386,300,381,289,368,290,348,288,306,288,273,293,258,302,251,297,234,295,216,293,201,290,195,278,216,272,251,272,281,269,296,273,311,270,352,268,363,263,356,257,344,253,335,253,325,249,319,241,331,239,336,241,352,240,361,237,369,236,247,238,251,245,257,249,270,253,281,254,279,247,277,242,277,236" shape="poly">
+    <area target="_blank" alt="rocks" title="rock" href="https://en.wikipedia.org/wiki/Rock" coords="1,261,1,293,1,340,3,427,130,427,349,426,473,422,273,343,245,324,271,314,294,306,310,309,347,329,378,329,323,323,366,331,365,319,357,309,364,306,378,308,385,299,372,293,323,288,293,291,270,296,260,303,204,292,195,281,199,274,234,270,255,270,283,269,311,270,333,269,356,266,358,259,341,254,331,248,320,240,311,237,283,235,283,243,288,254,275,253,256,250,247,243,240,234,219,233,185,232,204,226,183,226,161,222,141,221,118,224,113,219,107,209,96,204,85,204,74,211,83,219,66,210,59,214,57,226,62,229,52,241,38,250,17,257" shape="poly">
+    </map>
+    <p style="color:black; background-color:transparent;"><small><cite>The Bruce</cite> by Cico and David.</small></p>
+
+    <h2 id="link-quote">Links and Quotes</h2>
+    <p><abbr title="deoxyribonucleic acid">DNA</abbr> is <q>a long polymer made from repeating units called nucleotides. </q>
+    </p>
+    <blockquote cite="https://en.wikipedia.org/wiki/DNA"> 
+        <a title="see more" href="https://www.google.com" target="_blank">
+            <img src="../pictures/DNA.gif" alt="DNA Structure" style="width:80px; height:150px; float: right;">
+        </a>
+        The two DNA strands are known as polynucleotides as they are composed of simpler monomeric units called nucleotides.[2][3] Each nucleotide is composed of one of four nitrogen-containing nucleobases (cytosine [C], guanine [G], adenine [A] or thymine [T]), a sugar called deoxyribose, and a phosphate group. 
+    </blockquote>
+    <p>This is a bookmark where you can go to <a href="#formats" alt="Formats">Formats</a> sections.</p>
+    <hr>
+
+    <h1>New Stuff</h1>
+    <h2 id="table-list">Tables and Lists</h2>
+    <p>Let's insert a table.</p>
+    <table style="width:100%">
+        <caption>Enployee Name and Age</caption>
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td colspan="2">Jim Green</td>
+            
+            <td rowspan="2">25</td>
+        </tr>
+        <tr>
+            <td>Peter</td>
+            <td>George</td>
+        </tr>
+        <tr>
+            <td>William</td>
+            <td>Victory</td>
+            <td>30</td>
+        </tr>
+    </table>
+    <p>An <span style="color:rgb(73, 8, 224);">unordered list</span> :vegatables.</p>
+    <ul>
+        <li>tomato</li>
+        <li>cucumber</li>
+        <li>carrot</li>
+    </ul>
+
+    <p>An <span style="color:rgb(73, 8, 224);">ordered list</span>: animals.</p>
+    <ol type="1" start="50">
+        <li>cat</li>
+        <li>dog</li>
+        <li>squirrel</li>
+    </ol>
+
+    <p>Here is a <span style="color:rgb(73, 8, 224);">description list</span>: drink.</p>
+    <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl>
+    <h2 id="iframe">iframe</h2>
+    <p>Yes, you can show a webpage within you webpage.</p>
+    <p>Below you can visit 
+        <a href="http://www.google.com" alt="google" target="_blank">google</a> directly.
+    </p>
+    <iframe src="http://www.baidu.com" height="300" width="100%" title="iframe example" target="top" style="border:1px dashed red">baidu</iframe>
+    <p>The link 
+        <a target="iframe_a" style="color:blue;" href="https://www.baidu.com" alt="baidu">baidu</a>will open in the following window. 
+    </p>
+    <iframe src="" name="iframe_a" height="300" width="100%" title="another iframe example"></iframe>
+
+    <p>a link to 
+        <a href="test.html" alt="test" target="_blank">another page 
+        </a>
+    </p>
+
+    <h2 id="responsive">Responsive</h2>
+    <p>A responsive picture.</p>
+    <img src="../pictures/bruce.jpeg" alt="bruce" style="width: 100%; height:auto">
+    <p style="font-size:3vw;">Responsive font size. </p>
+    <p>Responsive elements.</p>
+    <div style="overflow: auto;">
+        <div class="left">
+            <span>left</span>
+        </div>
+    
+        <div class="middle">
+            <span>middle</span>
+        </div>
+    
+        <div class="right">
+            <span>right</span>
+        </div> 
+    </div>
+
+    <h2 id="computercode">Computer code</h2>
+    <p>Some Python code:</p>
+    <code>
+        x = [1, 2, 3] <br>
+        print(x) 
+    </code>
+    <p>In the above code, <var>x</var> is a variable.</p>
+    <p>If you want to print this page, use <kbd>Ctrl + P</kbd></p>
+    <p>Sometimes you may get a <samp>404 Page Not Found</samp> error.</p>
+
+    <div style="position: relative;">
+        <img style="width:100%; opacity: 0.5;" src="../pictures/bruce.jpeg" z-index="1">
+        <p style="font-size:large; position: absolute; text-align: center; width:100%; top:46%; background:none">text inside an image</p>
+      </div>
+
+
+
+
+    
+
+    
+
+
+
+
+
+    
+
+    
+    
+</body>
+</html>

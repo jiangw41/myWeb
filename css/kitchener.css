@@ -1,0 +1,180 @@
+* {
+  text-align: center; 
+  box-sizing: border-box;
+}
+
+div.header { 
+  position: relative; 
+  overflow: auto;  
+}
+
+p.header {
+  color: rgb(37, 18, 206);
+  font-size: 200%; 
+  font-weight: 800; 
+  font-family: 'Tangerine';
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+p.header:hover {
+  color: red; 
+  font-size: 300%;
+}
+
+img.header {
+  position: absolute; 
+  left: 0; 
+  top: 10%;
+  float:left; 
+  width: auto; 
+  height: 70%; 
+}
+
+.body_container {
+  clear: left; 
+  position: relative; 
+}
+
+.header_contact {
+  border: 1px dotted black; 
+  position: absolute; 
+  right: 0; 
+  top: 10%; 
+  height: 80%; 
+}
+
+.header_icon {
+  float: left; 
+  width: 50%;
+  padding: 5px;   
+}
+
+.header_icons_container::after {
+  content: "";
+  clear: both;
+  display: table;}
+
+.body_container {
+  position: relative; 
+}
+
+.body_container::after {
+  content: ""; 
+  clear: both;
+  display: table; 
+}
+
+.side {
+  position: relative;
+  z-index: 1; 
+}
+#train {
+  position: absolute; 
+  left: 0; 
+  opacity: 0.2; 
+  width: 100%; 
+  max-height: 800px;
+  z-index: 0;
+}
+
+a {
+  
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(235, 48, 141); 
+}
+
+a:hover {
+  color: red; 
+  text-decoration: underline;
+}
+
+ul.menu {
+  list-style-type: none;
+  color: rgb(24, 3, 3); 
+  width: 80%; 
+  font-size: 1.5em;   
+}
+
+ul.menu li {
+  border: 1px solid blue; 
+  margin-bottom: 20px; 
+  background-color: rgb(183, 218, 173);
+}
+
+.menu {
+  overflow: hidden; 
+  float: left;
+  width: 20%;  
+}
+
+.body {
+  font-size: 1.8em; 
+  color: rgb(60, 9, 179);
+  float: left; 
+  width: 80%; 
+  line-height: 1.5;
+}
+
+.quote {
+  display: inline-block; 
+  width: 100%; 
+  padding-right: 10px;
+}
+
+.contents {
+  border-bottom: 1px dotted grey;
+  padding: 15px; 
+  position: relative;
+  z-index: 1;
+}
+
+.contents:hover {
+  font-size: 150%;
+}
+
+#history {
+  background-color: lightblue;
+}
+
+#population {
+  background-color: rgb(84, 235, 227);
+}
+
+#culture {
+  background-color: lightyellow;
+}
+
+#weather {
+  background-color: rgb(241, 186, 195);
+}
+
+div.footer {
+  position: relative; 
+  bottom: -30px; 
+  left: -5px; 
+  width: 100%; 
+  padding: 0; 
+  margin: 0; 
+  background-color: rgb(146, 141, 141);
+  text-align: left; 
+}
+
+#author {
+  border-bottom: 1px solid rgb(123, 123, 128);
+  text-align: left; 
+  padding: 20px 20px; 
+}
+
+div.footer:hover {
+  font-size: 2em; 
+  color: red; 
+  background-color: rgb(174, 236, 150);
+}
+
+p.footer {
+  text-align: left; 
+  padding-left: 20px; 
+}

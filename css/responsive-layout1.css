@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(162, 187, 243);
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  padding-top: 50px; 
+}
+
+p {
+  padding-left: 20px;  
+}
+
+div.nav {
+  background-color: black;
+  border: 1px solid black; 
+  position: sticky; 
+  top: 0; 
+  width: 100%; 
+}
+
+.body::after, .nav::after {
+  clear: both; 
+  content: "";
+  display: table; 
+}
+
+.nav a {
+  text-decoration: none;
+  display: block;
+  float: left; 
+  padding: 15px; 
+  color: white;  
+}
+
+.nav a:last-child {
+  float: right; 
+}
+
+.body {
+  margin-top: 10px; 
+  width: 100%;
+ 
+}
+
+div.main {
+  width: 75%; 
+  float: left; 
+  padding: 5px; 
+}
+
+div.side {
+  float: right;
+  width: 23%; 
+  padding: 5px; 
+}
+
+h1.main {
+  padding: 40px 0 0 22px; 
+}
+
+h2.side {
+  padding: 30px 0 0 22px; 
+}
+
+.main1, .main2, .side1, .side2, .side3 {
+  background-color: white; 
+}
+
+.main1 h4, .main2 h4 {
+  padding-left: 30px; 
+}
+
+.img {
+  background-color: pink;
+  width: 90%;
+  height: 300px; 
+  margin: auto; 
+}
+
+.side-img {
+  background-color: pink;
+  width: 90%;
+  height: 150px; 
+  margin: auto; 
+}
+
+.main2 {
+  margin-top: 10px; 
+}
+
+.footer {
+  background: white; 
+  border: 1px solid white; 
+  margin: 0 -10px -9px -9px;  
+  text-align: center;
+}
+
+
+
+@media screen and (max-width: 900px) {
+  div.side, div.main {
+    width: 100%; 
+    padding: 0; 
+   
+  }
+
+}

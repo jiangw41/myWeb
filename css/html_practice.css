@@ -1,0 +1,101 @@
+h1 {
+    color:blue;
+    background-color:antiquewhite
+}
+
+h2 {
+    color: turquoise;
+    background-color: whitesmoke;
+    border: 1px solid Tomato;
+}
+
+p {
+    color: rgb(206, 59, 5); 
+    background-color:rgb(238, 224, 224);
+}
+
+img {
+    width: 640px;
+    height: 427px; 
+}
+
+a:hover {
+    color:rgb(218, 22, 55); 
+    text-decoration: underline;
+}
+
+table, td, th {
+    text-align: center;
+    border: 1px solid green; 
+    border-spacing: 15px; 
+    border-collapse: collapse;
+    
+}
+
+th {
+    text-align: left; 
+}
+
+tr:nth-child(odd) {
+    background-color:antiquewhite; 
+}
+
+tr:nth-child(even) {
+    background-color: rgb(219, 230, 226);
+}
+
+td, th {
+    padding: 15px; 
+    margin: 40px; 
+}
+
+.navigation ul {
+    list-style-type: None;
+    margin: 0; 
+    padding: 0; 
+    overflow: hidden; 
+    background-color:#333333; 
+}
+
+.navigation ul li {
+    float: left;
+}
+
+.navigation a {
+    display: block; 
+    color: white; 
+    text-align: center;
+    padding: 16px;
+    text-decoration: none; 
+}
+
+.navigation a:hover {
+    background-color: #111111;
+    color:chartreuse; 
+}
+
+* {
+box-sizing:border-box; 
+}
+
+.left, .right {
+    width: 20%;
+    float: left;
+    padding: 20px;
+    background-color:rgb(7, 214, 145);
+}
+
+.middle {
+    width: 60%;
+    float: left;
+    padding: 20px;
+    background-color: bisque;
+}
+
+@media screen and (max-width: 800px) {
+    .left, .middle, .right {
+        width:100%; 
+    }
+
+}
+

@@ -1,0 +1,58 @@
+h3 {
+  text-shadow: 2px 2px 4px #CE6A57;
+}
+
+form {
+  background-color: #f3e8e8; 
+}
+
+.text legend {
+  font-size: 1.2em; 
+  color: rgb(255, 0, 149); 
+}
+
+.text input {
+  width: 200px;
+}
+
+input {
+  padding: 8px;
+  background-color: rgb(210, 208, 238);
+}
+
+input:focus {
+  background-color: white;
+}
+
+input:hover {
+  font-size: large;
+}
+
+[type="submit"]:hover, [type="reset"]:hover {
+  font-size: large;
+  color: red; 
+  border-radius: 5px;
+}
+
+input[type=search] {
+  background-image: url("https://img.icons8.com/ios/50/000000/search--v1.png"); 
+  background-position: left;
+  background-repeat: no-repeat; 
+  background-size: contain; 
+  padding-left: 40px;
+}
+
+input[type=search]:hover {
+  padding-left: 60px; 
+}
+
+@media screen and (max-width: 800px) {
+  input {
+    float: left; 
+    display: block; 
+  }
+  label {
+    clear: both; 
+    display: block; 
+  }
+}

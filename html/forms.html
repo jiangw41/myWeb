@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/forms.css">
+  <title>various forms</title>
+</head>
+<body>
+<h1>An adventure of HTML &lt;form&gt;</h1>
+<h2>Different Input Types</h2>
+<h3>Text Fields</h3> 
+<form class="text">
+  <fieldset>
+    <legend>Personal Information</legend>
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+  </fieldset>
+</form>
+
+<h3>Password Fields and Reset</h3>
+<form>
+  <label for="uname">Username: </label>
+  <input type="text" id="uname" name="uname"><br>
+  <label for="psw">Password: </label>
+  <input type="password" id="psw" name="psw"><br>
+  <!--If we omit value attribute, the button gets a default text.-->
+  <input type="submit" value="Submit">
+  <input type="reset">
+</form>
+
+<h3>Radio Buttons with a Submit Button</h3>
+<!--It allows user to select only one. -->
+<p>You can only select one:</p>
+<form action="/action_page.php" target="_blank" method="get">
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label><br>
+  <input type="submit" value="Submit">
+</form>
+
+<h3>Checkbox</h3>
+<p>You can select zero or more options:</p>
+<form>
+  <input type="checkbox" id="v1" name="v1" value="Bike">
+  <label for="v1">I have a bike.</label><br>
+  <input type="checkbox" id="v2" name="v2" value="Car">
+  <lable for="v2">I have a car.</lable><br>
+  <input type="checkbox" id="v3" name="v3" value="Boat">
+  <label for="v3">I have a boat.</label><br>
+  <input type="submit" value="Submit">
+</form>
+
+<h3>Button</h3>
+<input type="button" onclick="alert('helllo')" value="click me!">
+
+<h3>Color</h3>
+<form>
+  <label for="color">Please select your favourite color:</label>
+  <input type=color id="color" name="color"><br>
+  <input type="submit" value="Submit">
+</form>
+
+<h3>Date</h3>
+<form>
+  <label for="date">Please select a date in 1980:</label>
+  <input type="date" id="date" name="date" min="1980-01-01" max="1980-12-31">
+</form>
+
+<h3>Datetime</h3>
+<p>It is not supported in Firefox, Safari or IE 12 or earlier.</p>
+<form>
+  <label for="dt">Please select a date and time:</label>
+  <input type="datetime" id="dt" name="dt">
+</form>
+
+<h3>Email</h3>
+<form>
+  <label for="email">Please input an email address:</label>
+  <input type="email" id="email" name="email">
+</form>
+
+<h3>File</h3>
+<form>
+  <lable for="file">You can select a file:</lable>
+  <input type="file" id="file" name="file">
+</form>
+
+<h3>Month</h3>
+<p>It is not supported in Firefox, Safari or IE 12 or earlier.</p>
+<form>
+  <label for="month">Select a month:</label>
+  <input type="month" id="month" name="month">
+</form>
+
+<h3>Number</h3>
+<form>
+  <label for="num">Please select a number between 1 and 5:</label>
+  <input type="number" id="num" name="num" min="1" max="5">
+</form>
+
+<h3>Range</h3>
+<form>
+  <lable for="range">Please select a number between 0 and 50:</lable>
+  <input type="range" id="range" name="range" min="0" max="50">
+</form>
+
+<h3>Search</h3>
+<form>
+  <label for="search">Below is a search box:</label>
+  <input type="search" id="search" name="search">
+  <input type="submit" value="Submit">
+</form>
+
+<h3>Tel</h3>
+<form>
+  <label for="tel">Please enter your phone number:</label>
+  <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+</form>
+
+<h3>Time</h3>
+<form>
+  <lable for="time">Please input a time:</lable>
+  <input type="time" id="time" name="time">
+</form>
+
+<h3>URL</h3>
+<form>
+  <label for="url">Please enter an URL:</label>
+  <input type="url" id="url" name="url">
+</form>
+
+<h3>Week</h3>
+<p>It is not supported in Safari, Firefox, IE 11 (or earlier).</p>
+<label for="week">Please select a week:</label>
+<input type="week" id="week" name="week">
+
+<hr>
+<h2>Other Kinds of Elements</h2>
+<h3>Select Element</h3>
+<form action="/action_page.php" target="_blank" method="get">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars" size="4" multiple required>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi" selected>Audi</option>
+  </select>
+  <input type="submit" value="Submit">
+</form>
+
+<h3>Textarea Element</h3>
+<form>
+  <textarea name="comments" rows="3" col="5">Comments..</textarea>
+  <input type="submit" value="Submit">
+</form>
+
+<h3>Button Element</h3>
+<!--Always specify type attribute as different browsers may use different default types for the button element-->
+<button type="button" onclick="alert('Are you still watching?')">Click Me</button>
+
+<h3>Datalist Element</h3>
+<p>Please tell me your favourite fruit:</p>
+<form>
+  <input list="fruits" name="fruit">
+  <datalist id="fruits">
+    <option value="banana"></option>
+    <option value="apple"></option>
+    <option value="cherry"></option>
+    <option value="pear"></option>
+    <option value="pineapple"></option>
+    <option value="kiwi"></option>
+    <option value="watermelon"></option>
+    <option value="grape"></option>
+  </datalist>
+  <input type="submit" value="Submit">
+</form>
+
+<h3>Output Element</h3>
+<p>The output element represents the result of a calculation.</p>
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range" id="a" name="a" value="50">
+  100+
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br> 
+</form>
+
+</body>
+</html>
