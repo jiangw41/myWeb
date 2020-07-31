@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: rgb(219, 230, 235);
+}
+
+.container::after {
+  content: " "; 
+  clear: both; 
+  display: table;
+}
+
+.third {
+  padding: 20px;
+  padding-right: 0;  
+  margin: 0; 
+  width: 33.33%;
+  float: left;
+}
+
+.img-container {
+  position: relative;
+  background-color: slateblue;
+}
+
+ img {
+  display: block; 
+  width: 100%; 
+  height: auto; 
+}
+
+.hidden-element {
+  width: 100%; 
+  position: absolute; 
+  top: 40%; 
+  text-align: center;
+  color: white; 
+  visibility: hidden; 
+}
+
+p.fade-box {
+  padding: 10px; 
+  background-color: green; 
+  margin: 0 40% 0; 
+}
+
+.fade-text:hover img.fade-text {
+  visibility: hidden; 
+}
+
+.fade-text:hover .hidden-element {
+  visibility: visible;
+}
+
+.fade-box:hover img.fade-box {
+  opacity: 0.3;; 
+}
+
+.fade-box:hover .hidden-element {
+  visibility: visible;
+}
+
+.img-container1 {
+  position: relative;
+}
+
+.img-container1 img {
+  position: relative; 
+  z-index: 0; 
+  width: 100%; 
+  height: auto; 
+}
+
+div.slide-top, div.slide-bottom, div.slide-left, div.slide-right {
+  position: absolute; 
+  z-index: 1; 
+  background-color: rgb(48, 13, 206); 
+  text-align: center; 
+}
+
+div.slide-top, div.slide-bottom {
+  width: 100%; 
+  height: 0;
+}
+
+div.slide-left, div.slide-right {
+  width: 0%; 
+  height: 100%;
+}
+
+div.slide-top {
+  top: 0; 
+}
+
+div.slide-bottom {
+  bottom: 0; 
+}
+
+div.slide-left {
+  top: 0; 
+  left: 0; 
+}
+
+div.slide-right {
+  top: 0; 
+  right: 0; 
+}
+
+p.slide {
+  position: absolute;  
+  color: rgb(235, 235, 240); 
+  visibility: hidden;
+  font-size: 1.5em; 
+  text-align: center;
+  width: 100%; 
+}
+
+div.slide-top p {
+  width: 100%; 
+  top: 35%;
+}
+
+div.slide-bottom p {
+  bottom: 40%;
+  width: 100%;
+}
+
+div.slide-left p {
+  top: 45%;
+  height: 100%; 
+}
+
+div.slide-right p {
+  top: 40%;
+  height: 100%; 
+}
+
+.slide:hover div.slide-top, .slide:hover div.slide-bottom {
+  animation-name: slide-vertically; 
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.slide:hover div.slide-left, .slide:hover div.slide-right {
+  animation-name: slide-horizontally; 
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.slide:hover p.slide {
+  visibility: visible;
+}
+
+@keyframes slide-vertically {
+  0% {height: 0; }
+  50% {height: 50%;}
+  100% {height: 100%;}
+}
+
+@keyframes slide-horizontally {
+  0% {width: 0; }
+  50% {width: 50%;}
+  100% {width: 100%;}
+}
+
+.container2 {
+  margin-top: 30px; 
+}
+
+
+@media screen and (max-width: 800px) {
+  .third {
+    width: 100%; 
+  }
+}
