@@ -3,22 +3,31 @@
   box-sizing: border-box;
 }
 
+body {
+  position: relative; 
+  margin: 0; 
+  padding-top: 0; 
+}
+
 div.header { 
   position: relative; 
   overflow: auto;  
 }
 
-p.header {
+p.header, #short-welcome {
   color: rgb(37, 18, 206);
-  font-size: 200%; 
+  font-size: 1.5em; 
   font-weight: 800; 
   font-family: 'Tangerine';
   text-shadow: 4px 4px 4px #aaa;
 }
 
+p.header {
+  display: none; 
+}
+
 p.header:hover {
   color: red; 
-  font-size: 300%;
 }
 
 img.header {
@@ -30,16 +39,11 @@ img.header {
   height: 70%; 
 }
 
-.body_container {
-  clear: left; 
-  position: relative; 
-}
-
 .header_contact {
-  border: 1px dotted black; 
+
   position: absolute; 
   right: 0; 
-  top: 10%; 
+  top: 5%; 
   height: 80%; 
 }
 
@@ -49,25 +53,21 @@ img.header {
   padding: 5px;   
 }
 
+.header_icons_container {
+  margin-top: -15px; 
+}
+
 .header_icons_container::after {
   content: "";
   clear: both;
   display: table;}
 
-.body_container {
-  position: relative; 
-}
-
-.body_container::after {
+.body::after {
   content: ""; 
   clear: both;
   display: table; 
 }
 
-.side {
-  position: relative;
-  z-index: 1; 
-}
 #train {
   position: absolute; 
   left: 0; 
@@ -77,44 +77,51 @@ img.header {
   z-index: 0;
 }
 
-a {
-  
+a { 
   text-decoration: none;
 }
 
-a:visited {
+a:link {
   color: rgb(235, 48, 141); 
 }
 
+a:visited {
+  color: white; 
+}
+
 a:hover {
-  color: red; 
+  color: greenyellow; 
   text-decoration: underline;
 }
 
-ul.menu {
-  list-style-type: none;
-  color: rgb(24, 3, 3); 
-  width: 80%; 
-  font-size: 1.5em;   
-}
-
-ul.menu li {
-  border: 1px solid blue; 
-  margin-bottom: 20px; 
-  background-color: rgb(183, 218, 173);
-}
-
 .menu {
-  overflow: hidden; 
-  float: left;
-  width: 20%;  
+  width: 100%;  
+}
+
+.menu:hover {
+  opacity: 1; 
+}
+
+.menu ul {
+  list-style-type: none;
+  width: 100%; 
+  font-size: 0.8em;   
+  background-color: black;
+  margin: 0; 
+  padding: 0; 
+}
+
+.menu li {
+  display: block; 
+  border: 1px solid rgb(88, 83, 83); 
+  padding: 3px; 
+  color: red;  
 }
 
 .body {
-  font-size: 1.8em; 
+  font-size: 1em; 
   color: rgb(60, 9, 179);
-  float: left; 
-  width: 80%; 
+  width: 100%; 
   line-height: 1.5;
 }
 
@@ -129,10 +136,6 @@ ul.menu li {
   padding: 15px; 
   position: relative;
   z-index: 1;
-}
-
-.contents:hover {
-  font-size: 150%;
 }
 
 #history {
@@ -168,13 +171,63 @@ div.footer {
   padding: 20px 20px; 
 }
 
-div.footer:hover {
-  font-size: 2em; 
-  color: red; 
-  background-color: rgb(174, 236, 150);
-}
-
 p.footer {
   text-align: left; 
   padding-left: 20px; 
 }
+
+
+@media only screen and (min-width:600px) {
+  .menu {
+    overflow: hidden; 
+    width: 100%;  
+    position: sticky; 
+    top: 0; 
+    z-index: 5;
+    opacity: 1; 
+  }
+
+  .menu li {
+    display: inline-block; 
+    width: 24.3%; 
+    margin: 0; 
+    padding:0; 
+    text-align: center;
+    font-size: 1.5em;
+    border: none; 
+  }
+
+  p.header {
+    display: block; 
+  }
+
+  #short-welcome {
+    display: none;
+  }
+  
+  .body {
+    font-size: 1.5em; 
+    color: rgb(60, 9, 179);
+
+    width: 100%; 
+    line-height: 1.5;
+  }
+
+  .side {
+    position: relative;
+    z-index: 1; 
+  }
+
+  .contents:hover {
+    font-size: 150%;
+  }
+
+  div.footer:hover {
+    font-size: 2em; 
+    color: red; 
+    background-color: rgb(174, 236, 150);
+  }
+}
+
+
+
